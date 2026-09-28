@@ -1,0 +1,25 @@
+﻿documento,linha,pagina,texto,marcacao_teste
+Manual SAP CAP,1,1,"SAP Cloud Application Programming Model",
+Manual SAP CAP,2,1,"O SAP Cloud Application Programming Model (CAP) é um framework para desenvolvimento de aplicações empresariais.",
+Manual SAP CAP,3,1,"Ele fornece ferramentas para modelagem de dados e criação de serviços.",
+Manual SAP CAP,4,1,"Conceitos fundamentais",
+Manual SAP CAP,5,1,"O CAP utiliza CDS para definir o modelo de dados da aplicação.",
+Manual SAP CAP,6,1,"As entidades definidas em CDS podem ser expostas através de serviços OData.",
+Manual SAP CAP,7,1,"Arquitetura",
+Manual SAP CAP,8,1,"Uma aplicação CAP normalmente possui uma camada de modelo, uma camada de serviço e lógica de negócio.",
+Manual SAP CAP,9,1,"Modelagem com CDS",
+Manual SAP CAP,10,1,"Entidades",
+Manual SAP CAP,11,1,"Uma entidade CDS representa uma estrutura de dados que pode ser persistida ou exposta por um serviço.",
+Manual SAP CAP,12,1,"Associações",
+Manual SAP CAP,13,1,"Associações permitem relacionar entidades dentro do modelo CDS.",
+Manual SAP CAP,14,1,"Serviços OData",
+Manual SAP CAP,15,1,"Os serviços OData disponibilizam as entidades do modelo para consumo externo.",
+Manual SAP CAP,16,1,"Consumo por aplicações",
+Manual SAP CAP,17,1,"Aplicações Fiori podem consumir os serviços OData disponibilizados pelo CAP.",
+Manual SAP CAP,18,1,"Tabela de exemplo",
+Manual SAP CAP,19,1,"Campo | Tipo | Descrição",tabela
+Manual SAP CAP,20,1,"ID | UUID | Identificador único",tabela
+Manual SAP CAP,21,2,"name | String | Nome do registro",tabela
+Manual SAP CAP,22,2,"createdAt | Timestamp | Data de criação",tabela
+Manual SAP CAP,23,2,"Considerações finais",
+Manual SAP CAP,24,2,"A organização estrutural do documento facilita a recuperação semântica e a criação de chunks.",
