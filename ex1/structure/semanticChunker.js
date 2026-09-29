@@ -26,7 +26,10 @@ function semanticChunker(unidades, embeddings) {
         const ultimoIndiceBloco =
             chunkAtual.unidades[chunkAtual.unidades.length - 1].indiceBloco;
 
-        if (unidadeAtual.indiceBloco !== ultimoIndiceBloco) {
+        if (
+            unidadeAtual.indiceBloco !== ultimoIndiceBloco &&
+            unidadeAtual.barreiraEstrutural
+        ) {
 
             chunks.push(chunkAtual);
 
@@ -48,7 +51,7 @@ function semanticChunker(unidades, embeddings) {
 
         const similaridadeComAnterior =
             cosineSimilarity(embeddingAnterior, embeddingAtual);
-            
+
         const scoreSemantico =
             (similaridadeComAnterior * 0.4) +
             (similaridadeComCentroide * 0.6);

@@ -1,0 +1,30 @@
+pagina,linha,texto
+1,1,"O Node.js é um ambiente de execução JavaScript baseado no motor V8."
+1,2,"Ele permite criar aplicações de backend de forma eficiente."
+1,3,"Muitas APIs REST são desenvolvidas utilizando Express."
+1,4,"Frameworks como NestJS oferecem uma arquitetura mais estruturada."
+1,5,"O gerenciamento de dependências normalmente é feito com npm."
+
+2,1,"Embeddings transformam textos em vetores numéricos."
+2,2,"Vetores semanticamente semelhantes tendem a ficar próximos."
+2,3,"A similaridade de cosseno mede o alinhamento entre vetores."
+2,4,"Modelos como multilingual-e5-base são usados para gerar embeddings."
+2,5,"Esses vetores podem ser utilizados em sistemas RAG."
+
+3,1,"O futebol é o esporte mais popular do Brasil."
+3,2,"As partidas normalmente possuem dois tempos de quarenta e cinco minutos."
+3,3,"Jogadores treinam fundamentos como passe e finalização."
+3,4,"Grandes competições atraem milhões de espectadores."
+3,5,"Clubes investem em categorias de base para formar atletas."
+
+4,1,"Bancos de dados armazenam informações estruturadas."
+4,2,"PostgreSQL é amplamente utilizado em aplicações corporativas."
+4,3,"Índices ajudam a melhorar o desempenho das consultas."
+4,4,"Transações garantem consistência dos dados."
+4,5,"Modelagem adequada reduz problemas de manutenção."
+
+5,1,"A inteligência artificial tem aplicações em diversas áreas."
+5,2,"Modelos de linguagem conseguem interpretar texto natural."
+5,3,"Sistemas de recomendação utilizam aprendizado de máquina."
+5,4,"Empresas usam IA para automatizar processos repetitivos."
+5,5,"A qualidade dos dados influencia diretamente os resultados."

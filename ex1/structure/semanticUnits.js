@@ -8,12 +8,23 @@ function semanticUnits(blocos) {
 
         for (const item of bloco.conteudo) {
 
-            unidades.push({
-                indiceBloco: i,
-                titulo: bloco.titulo,
-                tipo: item.tipo,
-                texto: `${bloco.titulo}\n\n${item.texto}`
-            });
+            if (bloco.titulo !== null) {
+                unidades.push({
+                    indiceBloco: i,
+                    titulo: bloco.titulo,
+                    tipo: item.tipo,
+                    texto: `${bloco.titulo}\n\n${item.texto}`,
+                    barreiraEstrutural: bloco.barreiraEstrutural
+                });
+            } else {
+                unidades.push({
+                    indiceBloco: i,
+                    titulo: bloco.titulo,
+                    tipo: item.tipo,
+                    texto: `${item.texto}`,
+                    barreiraEstrutural: bloco.barreiraEstrutural
+                });
+            }
         }
     }
 

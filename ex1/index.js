@@ -14,12 +14,14 @@ const { finalizeChunks } = require('./structure/finalizeChunks')
 
 async function main() {
 
-    const conteudo = fs.readFileSync('documento_teste_estrutura_chunking.csv', 'utf-8')
+    const conteudo = fs.readFileSync('teste_chunk_semantico.csv', 'utf-8')
+    // const conteudo = fs.readFileSync('documento_teste_estrutura_chunking.csv', 'utf-8')
 
     const conteudoEstruturado = parse(conteudo, {
         columns: true,
         skip_empty_lines: true
     })
+
 
     const retornosGerais = structuralContext(conteudoEstruturado)
 
@@ -43,22 +45,45 @@ async function main() {
         }
     })
 
+
+
     const arvore = hierarchyBuilder(result);
 
     // console.dir(arvore, { depth: null });
 
     const blocosEstruturados = structuralBlocks(arvore)
+    // console.log(...blocosEstruturados)
+
 
     const unidadesSemanticas = semanticUnits(blocosEstruturados)
+    // console.log(unidadesSemanticas)
 
     const textos = unidadesSemanticas.map(unidade => unidade.texto)
+    // console.log(textos)
 
     const embeddings = await gerarEmbeddings(textos)
+    // console.log(embeddings)
 
     const chunks = semanticChunker(
         unidadesSemanticas,
         embeddings
     )
+
+    // console.log(chunks)
+
+    // chunks.forEach((chunk, indice) => {
+    //     console.log(`\n===== CHUNK ${indice} =====`);
+
+    //     console.log("Quantidade de unidades:", chunk.unidades.length);
+
+    //     chunk.unidades.forEach((unidade, indiceUnidade) => {
+    //         console.log(`\n  Unidade ${indiceUnidade}:`);
+    //         console.log("  Índice do bloco:", unidade.indiceBloco);
+    //         console.log("  Título:", unidade.titulo);
+    //         console.log("  Tipo:", unidade.tipo);
+    //         console.log("  Texto:", unidade.texto);
+    //     });
+    // });
 
     const chunksFinais = finalizeChunks(chunks)
 
